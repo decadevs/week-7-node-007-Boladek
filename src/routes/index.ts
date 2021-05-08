@@ -100,7 +100,7 @@ router.post('/calculate', (req: Request, res: Response, next: NextFunction) => {
           res.status(400).send(error.details[0].message);
           return;
       }
-    req.body.area = (parseInt(req.body.dimension) ** 2) * Math.PI;
+    req.body.area = Number(((parseInt(req.body.dimension) ** 2) * Math.PI).toFixed(2));
   }
     
   else if (shape === "square") {
