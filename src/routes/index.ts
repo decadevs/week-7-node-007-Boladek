@@ -58,8 +58,8 @@ function validateRectangle(rectangle: Rectangle) {
   const Schema = Joi.object({
     shape: Joi.string().min(9).required(),
       dimension: Joi.object().keys({
-          length: Joi.number(),
-          breadth: Joi.number()
+          length: Joi.number().required(),
+          breadth: Joi.number().required()
     }).required()
   })
   return Schema.validate(rectangle)
@@ -69,9 +69,9 @@ function validateTriangle(triangle: Triangle) {
   const Schema = Joi.object({
     shape: Joi.string().min(8).required(),
     dimension: Joi.object().keys({
-      a: Joi.number(),
-      b: Joi.number(),
-      c: Joi.number()
+      a: Joi.number().required(),
+      b: Joi.number().required(),
+      c: Joi.number().required()
     }).required()
   })
   return Schema.validate(triangle);
@@ -94,6 +94,7 @@ router.post('/calculate', (req: Request, res: Response, next: NextFunction) => {
   if (!shape) {
     return res.status(400).send("enter a valid shape")
   }
+
   else if (shape === "circle") {
     const {error} = validateCircle(req.body);
       if (error){

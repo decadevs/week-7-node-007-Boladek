@@ -70,5 +70,33 @@
       },
       "area": 8,
       "createdAt": "2021-05-08T14:09:09.844Z"
+   },
+   {
+      "shape": "triangle",
+      "dimension": {
+         "a": "5",
+         "b": "6"
+      },
+      "area": null,
+      "createdAt": "2021-05-08T16:49:17.741Z"
+   },
+   {
+      "shape": "rectangle",
+      "dimension": {
+         "length": "5",
+         "breadth": "6"
+      },
+      "area": 30,
+      "createdAt": "2021-05-08T16:50:21.848Z"
+   },
+   {
+      "shape": "triangle",
+      "dimension": {
+         "a": "6",
+         "b": "3",
+         "c": "6"
+      },
+      "area": 7.5,
+      "createdAt": "2021-05-08T16:52:37.088Z"
    }
 ]

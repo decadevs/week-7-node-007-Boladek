@@ -25,8 +25,8 @@ function validateRectangle(rectangle) {
     var Schema = joi_1.default.object({
         shape: joi_1.default.string().min(9).required(),
         dimension: joi_1.default.object().keys({
-            length: joi_1.default.number(),
-            breadth: joi_1.default.number()
+            length: joi_1.default.number().required(),
+            breadth: joi_1.default.number().required()
         }).required()
     });
     return Schema.validate(rectangle);
@@ -35,9 +35,9 @@ function validateTriangle(triangle) {
     var Schema = joi_1.default.object({
         shape: joi_1.default.string().min(8).required(),
         dimension: joi_1.default.object().keys({
-            a: joi_1.default.number(),
-            b: joi_1.default.number(),
-            c: joi_1.default.number()
+            a: joi_1.default.number().required(),
+            b: joi_1.default.number().required(),
+            c: joi_1.default.number().required()
         }).required()
     });
     return Schema.validate(triangle);
@@ -63,7 +63,7 @@ router.post('/calculate', function (req, res, next) {
             res.status(400).send(error.details[0].message);
             return;
         }
-        req.body.area = (Math.pow(parseInt(req.body.dimension), 2)) * Math.PI;
+        req.body.area = Number(((Math.pow(parseInt(req.body.dimension), 2)) * Math.PI).toFixed(2));
     }
     else if (shape === "square") {
         var error = validateSquare(req.body).error;
