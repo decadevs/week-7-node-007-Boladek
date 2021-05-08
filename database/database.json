@@ -1,0 +1,74 @@
+[
+   {
+      "shape": "circle",
+      "dimension": "5",
+      "area": 78.53981633974483,
+      "createdAt": "2021-05-08T12:51:37.434Z"
+   },
+   {
+      "shape": "square",
+      "dimension": "5",
+      "area": 25,
+      "createdAt": "2021-05-08T12:52:17.887Z"
+   },
+   {
+      "shape": "rectangle",
+      "dimension": {
+         "length": "3",
+         "breadth": "5"
+      },
+      "area": 15,
+      "createdAt": "2021-05-08T12:52:51.159Z"
+   },
+   {
+      "shape": "triangle",
+      "dimension": {
+         "side_a": "3",
+         "side_b": "5",
+         "side_c": "1"
+      },
+      "area": 4.5,
+      "createdAt": "2021-05-08T12:58:34.936Z"
+   },
+   {
+      "shape": "square",
+      "dimension": "5",
+      "area": 25,
+      "createdAt": "2021-05-08T14:03:29.023Z"
+   },
+   {
+      "shape": "circle",
+      "dimension": "5",
+      "area": 78.53981633974483,
+      "createdAt": "2021-05-08T14:03:35.896Z"
+   },
+   {
+      "shape": "rectangle",
+      "dimension": {
+         "length": "5",
+         "breadth": "6"
+      },
+      "area": 30,
+      "createdAt": "2021-05-08T14:04:06.230Z"
+   },
+   {
+      "shape": "triangle",
+      "dimension": {
+         "a": "5",
+         "b": "6",
+         "c": "5"
+      },
+      "area": null,
+      "createdAt": "2021-05-08T14:07:07.591Z"
+   },
+   {
+      "shape": "triangle",
+      "dimension": {
+         "a": "5",
+         "b": "6",
+         "c": "5"
+      },
+      "area": 8,
+      "createdAt": "2021-05-08T14:09:09.844Z"
+   }
+]
