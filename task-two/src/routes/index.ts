@@ -1,8 +1,8 @@
 import express, { Request, Response, NextFunction } from 'express';
 import Joi from 'joi';
 import fs from 'fs';
-const data = require('../../database/database.json');
-const absolute: string = '/Users/a/Desktop/Assignments/week-7-node-007-Boladek/database/database.json'
+const data = require('/Users/a/Desktop/Assignments/week-7-node-007-Boladek/task-two/database/database.json');
+const absolute: string = "/Users/a/Desktop/Assignments/week-7-node-007-Boladek/task-two/database/database.json"
 var router = express.Router();
 
 interface Cirle {

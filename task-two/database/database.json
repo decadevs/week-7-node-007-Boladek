@@ -149,5 +149,11 @@
       },
       "area": 12,
       "createdAt": "2021-05-09T11:08:33.916Z"
+   },
+   {
+      "shape": "square",
+      "dimension": "5",
+      "area": 25,
+      "createdAt": "2021-05-09T17:05:38.497Z"
    }
 ]
