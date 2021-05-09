@@ -92,7 +92,7 @@ router.get('/fetchData', (req: Request, res: Response, next: NextFunction) => {
 router.post('/calculate', (req: Request, res: Response, next: NextFunction) => {
   const shape = array.find((item: string) => item === req.body.shape.toLowerCase());
   if (!shape) {
-    return res.status(400).send("enter a valid shape")
+    return res.status(400).send(`That ${shape} is not allowed. Enter a valid shape ( circle, square, rectangle, triangle)`);
   }
 
   else if (shape === "circle") {
@@ -128,11 +128,12 @@ router.post('/calculate', (req: Request, res: Response, next: NextFunction) => {
           res.status(400).send(error.details[0].message);
           return;
       }
-    req.body.area = (parseInt(req.body.dimension.a) + parseInt(req.body.dimension.b) + parseInt(req.body.dimension.c)) / 2
+    let periHalf = (parseInt(req.body.dimension.a) + parseInt(req.body.dimension.b) + parseInt(req.body.dimension.c)) / 2;
+    req.body.area = Number((Math.sqrt(periHalf * (periHalf - req.body.dimension.a) * (periHalf - req.body.dimension.b) * (periHalf - req.body.dimension.c))).toFixed(2));
   }
   
   const info: Shape = {
-    shape: req.body.shape,
+    shape: req.body.shape.toLowerCase(),
     dimension: req.body.dimension,
     area: req.body.area,
     createdAt: new Date()

@@ -98,5 +98,56 @@
       },
       "area": 7.5,
       "createdAt": "2021-05-08T16:52:37.088Z"
+   },
+   {
+      "shape": "triangle",
+      "dimension": {
+         "a": "6",
+         "b": "3",
+         "c": "6"
+      },
+      "area": 8.714212528966687,
+      "createdAt": "2021-05-08T17:48:51.964Z"
+   },
+   {
+      "shape": "triangle",
+      "dimension": {
+         "a": "6",
+         "b": "3",
+         "c": "6"
+      },
+      "area": 8.71,
+      "createdAt": "2021-05-08T17:49:50.886Z"
+   },
+   {
+      "shape": "triangle",
+      "dimension": {
+         "a": "6",
+         "b": "3",
+         "c": "6"
+      },
+      "area": 8.71,
+      "createdAt": "2021-05-09T11:06:13.858Z"
+   },
+   {
+      "shape": "square",
+      "dimension": "3",
+      "area": 9,
+      "createdAt": "2021-05-09T11:07:30.031Z"
+   },
+   {
+      "shape": "circle",
+      "dimension": "3",
+      "area": 28.27,
+      "createdAt": "2021-05-09T11:07:55.924Z"
+   },
+   {
+      "shape": "rectangle",
+      "dimension": {
+         "length": "4",
+         "breadth": "3"
+      },
+      "area": 12,
+      "createdAt": "2021-05-09T11:08:33.916Z"
    }
 ]

@@ -55,7 +55,7 @@ router.get('/fetchData', function (req, res, next) {
 router.post('/calculate', function (req, res, next) {
     var shape = array.find(function (item) { return item === req.body.shape.toLowerCase(); });
     if (!shape) {
-        return res.status(400).send("enter a valid shape");
+        return res.status(400).send("That " + shape + " is not allowed. Enter a valid shape ( circle, square, rectangle, triangle)");
     }
     else if (shape === "circle") {
         var error = validateCircle(req.body).error;
@@ -87,10 +87,11 @@ router.post('/calculate', function (req, res, next) {
             res.status(400).send(error.details[0].message);
             return;
         }
-        req.body.area = (parseInt(req.body.dimension.a) + parseInt(req.body.dimension.b) + parseInt(req.body.dimension.c)) / 2;
+        var periHalf = (parseInt(req.body.dimension.a) + parseInt(req.body.dimension.b) + parseInt(req.body.dimension.c)) / 2;
+        req.body.area = Number((Math.sqrt(periHalf * (periHalf - req.body.dimension.a) * (periHalf - req.body.dimension.b) * (periHalf - req.body.dimension.c))).toFixed(2));
     }
     var info = {
-        shape: req.body.shape,
+        shape: req.body.shape.toLowerCase(),
         dimension: req.body.dimension,
         area: req.body.area,
         createdAt: new Date()
