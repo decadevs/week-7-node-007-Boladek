@@ -6,8 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
 var joi_1 = __importDefault(require("joi"));
 var fs_1 = __importDefault(require("fs"));
-var data = require('/Users/a/Desktop/Assignments/week-7-node-007-Boladek/database/database.json');
-var absolute = "/Users/a/Desktop/Assignments/week-7-node-007-Boladek/database/database.json";
+var data = require('../../database/database.json');
+var absolute = "database/database.json";
 var router = express_1.default.Router();
 /* GET home page. */
 router.get('/', function (req, res, next) {

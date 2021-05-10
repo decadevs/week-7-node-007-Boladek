@@ -173,5 +173,23 @@
       "dimension": "5",
       "area": 25,
       "createdAt": "2021-05-09T19:09:23.340Z"
+   },
+   {
+      "shape": "square",
+      "dimension": "10",
+      "area": 100,
+      "createdAt": "2021-05-09T19:23:17.196Z"
+   },
+   {
+      "shape": "square",
+      "dimension": 10,
+      "area": 100,
+      "createdAt": "2021-05-09T19:23:35.500Z"
+   },
+   {
+      "shape": "square",
+      "dimension": 15,
+      "area": 225,
+      "createdAt": "2021-05-10T13:11:41.609Z"
    }
 ]
