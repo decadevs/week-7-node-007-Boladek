@@ -92,7 +92,7 @@ router.get('/fetchData', (req: Request, res: Response, next: NextFunction) => {
 router.post('/calculate', (req: Request, res: Response, next: NextFunction) => {
   const shape = array.find((item: string) => item === req.body.shape.toLowerCase());
   if (!shape) {
-    return res.status(400).send(`That ${shape} is not allowed. Enter a valid shape ( circle, square, rectangle, triangle)`);
+    return res.status(400).send(`That shape is not allowed. Enter a valid shape ( circle, square, rectangle, triangle)`);
   }
 
   else if (shape === "circle") {
